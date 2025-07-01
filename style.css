@@ -1,0 +1,159 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Main container */
+main {
+  background-color: #ffffffdd;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Search form */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+form input {
+  width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #2980b9;
+  color: white;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #3498db;
+}
+
+/* Result Section */
+.result {
+  text-align: center;
+}
+
+.result figure {
+  margin-bottom: 1.5rem;
+}
+
+.result .name figcaption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.result .temprature img {
+  width: 100px;
+  height: 100px;
+}
+
+.result .temprature figcaption {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+}
+
+/* Description */
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Weather Details List */
+ul {
+  list-style: none;
+  display: flex; /* ← ini bikin horizontal */
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+ul li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  min-width: 90px;
+}
+
+ul li i {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: #2980b9;
+}
+
+/* Animasi shake */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+main.error {
+  animation: shake 0.5s ease;
+  border: 2px solid #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form input {
+    width: 60%;
+  }
+
+  .result .temprature figcaption {
+    font-size: 2rem;
+  }
+}

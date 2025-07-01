@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <input type="text" outcomplete="off" id="valueSearch" />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <section class="result">
+        <figure class="name" id="city">
+          <figcaption>London</figcaption>
+          <img src="https://flagsapi.com/GB/shiny/32.png" alt="" />
+        </figure>
+
+        <figure class="temprature" id="temprature">
+          <img src="http://openweathermap.com/img/wn/10d@4x.png" alt="" />
+          <figcaption><span>initial</span></figcaption>
+        </figure>
+
+        <p class="description">initial</p>
+        <ul>
+          <li>
+            <i class="fa-solid fa-cloud"></i>
+            <span>Clouds</span>
+            <span id="clouds">initial </span>
+          </li>
+          <li>
+            <i class="fa-solid fa-droplet"></i>
+            <span>Humidity</span>
+            <span id="humidity">initial</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-gauge"></i>
+            <span>Pressure</span>
+            <span id="pressure">initial</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
